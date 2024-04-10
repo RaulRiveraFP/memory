@@ -13,7 +13,7 @@ const Tarjeta = ({ nombre, imagen }) => {
     <div className="w-[300px] h-[400px] rounded overflow-hidden shadow-lg bg-slate-200 p-5" onClick={handleClick}>
       <img
         className="max-w-48 cursor-pointer"
-        src={`../assets/${imagen}`}
+        src={imagen}
         alt={imagen}
       />
       <div className="px-6 py-4">

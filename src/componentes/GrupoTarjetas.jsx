@@ -1,11 +1,14 @@
 import React from 'react'
 import Tarjeta from './Tarjeta'
+import { useClicks } from './Context';
 
 const GrupoTarjetas = ({ arrayPersonajes }) => {
-console.log(arrayPersonajes.map(personaje=>(
-    console.log(personaje.imagen)
-)))
+
+  const { totalClicks } = useClicks(); 
+
   return (
+    <>
+    <h2>Clics totales = {totalClicks}</h2>
     <div className="flex flex-wrap justify-center gap-2 p-5">
       {arrayPersonajes.map(personaje => (
         <Tarjeta
@@ -15,6 +18,7 @@ console.log(arrayPersonajes.map(personaje=>(
         />
       ))}
     </div>
+    </>
   )
 }
 
